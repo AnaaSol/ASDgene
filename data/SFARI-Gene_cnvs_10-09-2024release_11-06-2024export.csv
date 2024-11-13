@@ -1,0 +1,4 @@
+status,cnv-locus,cnv-type,deletion-values,duplication-values,animal-model,number-of-reports,number-case-population,number-case-individuals,basepair-range
+
+9,22q11.2,Duplication,3,8,,7,8,11,21031117-21651381
+9,22q13.3,Deletion,14,0,,2,2,14,41122568-49565875
