@@ -61,6 +61,36 @@ body {
     margin: 20px 0;
 }
 
+/* Estilo para los tabs */
+.tabs {
+    display: flex;
+    margin-top: 15px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.tab.inactive {
+    background-color: #f1f1f1;
+    color: #888;
+}
+
+.tab.active {
+    background-color: #346fad;
+    color: white;
+    border-bottom: 2px solid #333;
+    text-decoration: none;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
 #bar-chart, #doughnut-chart {
     width: 40%;
     max-width: 500px;

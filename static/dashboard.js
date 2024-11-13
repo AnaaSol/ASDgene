@@ -139,3 +139,28 @@ function loadChartData(dataType) {
         alert('Hubo un error al cargar los datos. Por favor, inténtalo de nuevo.');
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener los elementos de los tabs
+    const mainTab = document.querySelector('.tab.inactive');
+    const genomicTab = document.querySelector('.tab.active');
+
+    // Asignar eventos a los tabs
+    mainTab.addEventListener('click', function () {
+        // Cambiar las clases de los tabs para reflejar cuál está activo
+        mainTab.classList.add('active');
+        mainTab.classList.remove('inactive');
+        genomicTab.classList.add('inactive');
+        genomicTab.classList.remove('active');
+
+        // Lógica para cambiar contenido si fuera necesario (no funcional en este caso)
+        // alert('Tab principal seleccionado');
+    });
+
+    genomicTab.addEventListener('click', function () {
+        // Redirigir al template gene_view
+        window.location.href = '/genes';
+    });
+});
+

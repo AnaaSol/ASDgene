@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+    <title>Gene View</title>
+</head>
+<body style="background-color: #f0f0f0;">
+    <div class="gene-sidebar">
+        <button id="download-pdf" style="margin: 20px;">Descargar PDF</button>
+        <h3>Genes</h3>
+        <ul id="gene-list">
+            <!-- Los genes se llenarán dinámicamente con JavaScript -->
+        </ul>
+    </div>
+
+    <div class="gene-main-content">
+        <header class="header">
+            <h1>ASDgenes</h1>
+            <div class="tabs">
+                <a href="/" class="tab active">Main</a>
+                <span class="tab inactive">Genomic</span>
+            </div>
+        </header>
+
+        <div class="sequence-container">
+            <div class="sequence-box" id="sequence-box">
+                <!-- Aquí se mostrará la secuencia del gen -->
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="percentages-box">
+                <p>%A: <span id="percent-a"></span></p>
+                <p>%T: <span id="percent-t"></span></p>
+                <p>%C: <span id="percent-c"></span></p>
+                <p>%G: <span id="percent-g"></span></p>
+                <p>%CG: <span id="percent-cg"></span></p>
+            </div>
+
+            <div id="8mer-visualization" class="eight-mer-box">
+                <!-- Las celdas se llenarán dinámicamente con JavaScript -->
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='genomic.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
