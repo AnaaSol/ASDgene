@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>ASDgenes Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#" onclick="loadChartData('sfari')">Puntaje SFARI</a></li>
+                <li><a href="#" onclick="loadChartData('eagle')">Puntaje Eagle</a></li>
+                <li><a href="#" onclick="loadChartData('clasificacion')">Clasificación</a></li>
+                <li><a href="#" onclick="loadChartData('cromosoma')">Cromosoma</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Título -->
+            <header class="header">
+                <h1>ASDgenes</h1>
+            </header>
+            
+            <!-- Gráficos -->
+            <div class="charts">
+                <canvas id="bar-chart"></canvas>
+                <canvas id="doughnut-chart"></canvas>
+            </div>
+            
+            <!-- Información adicional -->
+            <div class="info-box">
+                <h3>Información de los Gráficos</h3>
+                <p>Los gráficos muestran la cantidad de genes en función de los diferentes criterios seleccionados. Puedes elegir entre diferentes opciones en el menú para ver los gráficos correspondientes.</p>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
